@@ -1,0 +1,4 @@
+Task : create List collection of this employee class
+	add 10 employees to it
+	save all the 10 employees in 10 different files
+	use loop

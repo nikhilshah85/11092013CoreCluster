@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EmpNo>101</EmpNo>
+  <EmpName>Kriti</EmpName>
+  <EmpDesigantion>HR</EmpDesigantion>
+  <EmpSalary>12000</EmpSalary>
+  <EmpIsPermenant>true</EmpIsPermenant>
+</Employee>
