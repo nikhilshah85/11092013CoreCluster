@@ -1,0 +1,13 @@
+1. create a new webapi application
+2. Add a new class - Products.cs
+3. Add 5 properties to the same - pId, pName, pCategory,pPrice, pIsInStock
+4. Create a collection of products - static list, add 5 propducts by default
+5. Add methods to return all the products, productById, AddProduct,updateProduct,DeleteProduct
+
+
+	Lab Time : 
+	1. create a database / use the same from yesterday
+	2. install entity frameowk in the same application 
+	3. download POCO classes in the application
+	4. create an api controller with actions useing EF
+	5. perform / test CRUD opertions on the tables

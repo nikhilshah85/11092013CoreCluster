@@ -1,0 +1,67 @@
+1. Connect to the server I created on azure cloud
+	servername : trainer-corecluster.database.windows.net
+	username : trainer
+	Password : Password@1234
+2. create a new database - shoppingDB_yourname
+3. add a table products with pId, pName,pCategory,pPrice,pIsInStock
+4. add 5 records to the same
+
+5. Create a new asp.net mvc application - shoppingMVC - in day 6
+6. Add below nuget packages - right click solution explorer - Manage Nuget packages
+	Microsoft.EntityFrameworkCore.Tools
+	Microsoft.EntityFrameworkCore.Design
+	Microsoft.EntityFrameworkCore
+	Microsoft.EntityFrameworkCore.SqlServer
+
+7. Open Nuget package manager console
+		Menu bar -> tools -> Nuget package manager -> Package manager console
+
+8. Fire below command
+	Scaffold-DbContext " connection string " -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models\EF
+
+
+Server=tcp:trainer-corecluster.database.windows.net,1433;Initial Catalog=ShoppingDB_Poornima;Persist Security Info=False;User ID=trainer;Password=Password@1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+
+
+Scaffold-DbContext "Server=tcp:trainer-corecluster.database.windows.net,1433;Initial Catalog=ShoppingDB_Poornima;Persist Security Info=False;User ID=trainer;Password=Password@1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models\EF
+
+9. build the application
+10. right click controller folder -> Add controller -> MVC Controller with actions useing entity framework
+	choose table name as Model
+	choose DbContext file as Dbcontext
+	press ok (see other options for gk on the screen)
+
+	after this, it will create a controller with lot of CODE (CRUD operations on the table)
+	check the views folder
+
+11. in the controller file - 
+	a. instantiate new object of DbContext
+	b. comment the constructor
+
+12. update the Layout page under view/shared  folder
+
+               <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="Index">Employee</a>
+                        </li>
+
+13. build and run the application - test the app and all operations
+
+----------------------------------------------------------
+
+14. add  new table in same database - customers with cId, cName, cBalance, cCity, cIsActive
+	add some records to the same 
+	table shold have a primary key else EF core does not consider that table
+
+15. go back to application, run the same command with -Force option in nuget packge manager console
+
+	Scaffold-DbContext "Server=tcp:trainer-corecluster.database.windows.net,1433;Initial Catalog=ShoppingDB_Poornima;Persist Security Info=False;User ID=trainer;Password=Password@1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models\EF -Force
+
+16. craete a new controller on this table same like step no 10, repeat step 11, 12 and 13 
+
+
+
+
+
+
+
+
